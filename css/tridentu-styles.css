@@ -1,0 +1,24 @@
+.header {
+			background-color: #eceff4;
+			color: #2e3440;
+		}
+		#splash-img {
+			background-image: url("images/mountain.jpg");
+		}
+		.white {
+			color: #eceff4;
+		}
+		.footer {
+		`	background-color: #2e3440;
+		}
+		.frame {
+			background-color: #d8dee9;
+		}
+		.non-select {
+			user-select: none;
+		}
+		@media (display-mode: standalone), (display-mode: fullscreen), (display-mode: minimal-ui) {
+            body {
+                overscroll-behavior-y: contain;
+            }
+		}
