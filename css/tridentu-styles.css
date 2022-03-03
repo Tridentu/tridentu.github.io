@@ -3,7 +3,7 @@
 			color: #2e3440;
 		}
 		#splash-img {
-			background-image: url("/images/mountain.jpg");
+			background-image: url("../images/mountain.jpg");
 		}
 		.white {
 			color: #eceff4;
