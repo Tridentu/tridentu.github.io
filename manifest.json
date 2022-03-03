@@ -1,5 +1,6 @@
  
 {
     "accent-color": "#2e3440",
-    "name": "Tridentu"
+    "name": "Tridentu",
+    "display": "standalone"
 }
