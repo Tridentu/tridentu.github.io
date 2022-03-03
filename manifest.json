@@ -7,5 +7,6 @@
     "theme_color": "#eceff4",
     "lang": "en",
     "description": "Tridentu-R's homepage.",
-    "categories": "utilities"
+    "categories": "utilities",
+    "orientation": "auto"
 }
