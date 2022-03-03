@@ -8,5 +8,6 @@
     "lang": "en",
     "description": "Tridentu-R's homepage.",
     "categories": "utilities",
-    "orientation": "auto"
+    "orientation": "auto",
+    "short_name": "Tridentu"
 }
