@@ -20,7 +20,7 @@ sass:
 
 pages_excerpts: true
 collections:
-    - changelogs
+    changelogs:
         output: true
 
 exclude:
