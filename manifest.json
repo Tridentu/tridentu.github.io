@@ -17,5 +17,6 @@
             "purpose": "maskable any"
         }
     ],
+    "prefer_related_applications": false
     "short_name": "Tridentu"
 }
