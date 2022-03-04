@@ -9,5 +9,13 @@
     "description": "Tridentu-R's homepage.",
     "categories": "utilities",
     "orientation": "auto",
+    "icons": [
+        {
+            "src": "/images/icons/icon-48x48.png",
+            "sizes": "48x48",
+            "type": "image/png",
+            "purpose": "maskable any"
+        }
+    ],
     "short_name": "Tridentu"
 }
