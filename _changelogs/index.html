@@ -1,0 +1,19 @@
+---
+title: Release Notes
+home: true
+---
+
+
+{% for release_note in site.changelogs %}
+  {% if release_note.home != true %}
+  <h2>
+    <a href="{{ release_note.url }}">
+      {{ release_note.title }} - {{ release_note.version }}
+    </a>
+  </h2>
+  <p>{{ release_note.content | markdownify }}</p>
+  {% endif %}
+{% endfor %}
+
+
+
