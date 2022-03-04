@@ -19,6 +19,9 @@ sass:
   style:    expanded
 
 pages_excerpts: true
+collections:
+    - changelogs
+        output: true
 
 exclude:
 - README.md
