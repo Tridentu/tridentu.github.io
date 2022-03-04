@@ -18,7 +18,7 @@ sass:
   sass_dir: css
   style:    expanded
 
-
+pages_excerpts: true
 
 exclude:
 - README.md
