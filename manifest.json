@@ -23,5 +23,6 @@
         }
     ],
     "prefer_related_applications": false,
-    "short_name": "Tridentu"
+    "short_name": "Tridentu",
+    "start_url": "https://tridentu.github.io"
 }
