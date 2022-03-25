@@ -8,21 +8,26 @@
     "lang": "en",
     "description": "Tridentu-R's homepage.",
     "categories": "utilities",
-    "orientation": "auto",
     "icons": [
         {
             "src": "/images/icons/icon-48x48.png",
             "sizes": "48x48",
-            "type": "image/png",
-            "purpose": "maskable any"
+            "type": "image/png"
         },
          {
             "src": "/images/icons/icon-192x192.png",
             "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "maskable any"
+            "type": "image/png"
         }
     ],
     "prefer_related_applications": false,
-    "short_name": "Tridentu"
+    "short_name": "Tridentu",
+    "start_url": "https://tridentu.github.io",
+    "shortcuts": [
+        {
+            "name": "Features",
+            "url": "/features",
+            "description": "Lists Tridentu's main features."
+        }
+    ]
 }
