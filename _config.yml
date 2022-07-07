@@ -26,6 +26,7 @@ collections:
 exclude:
 - README.md
 
+paginate: 3
 
 safe: true
 lsi: false
