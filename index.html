@@ -109,7 +109,7 @@ title:  'Welcome'
           {% endif %}
 
       </div>
-      <span class="u-block">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      <span class="u-block">{{ paginator.page }} of {{ paginator.total_pages }}</span>
       <div class="pagination-item pagination-next">
         {% if paginator.previous_page %}
               <a href="{{ paginator.next_page_path }}" class="u-block">
