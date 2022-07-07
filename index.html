@@ -102,19 +102,18 @@ title:  'Welcome'
           {% if paginator.previous_page %}
                 <a href="{{ paginator.previous_page_path }}" class="u-block">
                     <p class="pagination-item-subtitle">Previous</p>
-                    <h5 class="m-0">Choose Items</h5>
+                    <h5 class="m-0">{{ paginator.page }} of {{ paginator.total_pages }}</h5>
                 </a>
           {% else %}
                 <span class="pagination-item-subtitle u-block">Previous</span>
           {% endif %}
 
       </div>
-      <span class="u-block">{{ paginator.page }} of {{ paginator.total_pages }}</span>
       <div class="pagination-item pagination-next">
         {% if paginator.previous_page %}
               <a href="{{ paginator.next_page_path }}" class="u-block">
                   <p class="pagination-item-subtitle">Next</p>
-                  <h5 class="m-0">Read</h5>
+                  <h5 class="m-0">{{ paginator.page }} of {{ paginator.total_pages }}</h5>
               </a>
         {% else %}
               <span class="pagination-item-subtitle u-block">Next</span>
