@@ -87,7 +87,7 @@ title:  'Welcome'
          <div class="card__body content">
             <p>{{ post.excerpt }}</p>
         </div>
-        <div class="card__footer content">{{ post.date }}</div>
+        <div class="card__footer content">{{ post.date | date_to_string: "ordinal", "US"  }}</div>
       <div>
    </div>
 {% endfor %}
@@ -95,6 +95,7 @@ title:  'Welcome'
 </div>
 
 <div class="row">
+<div clas="col-4">
   <div class="pagination no-bullets">
 
       <div class="pagination-item pagination-prev">
@@ -119,5 +120,6 @@ title:  'Welcome'
               <span class="pagination-item-subtitle u-block">Next</span>
         {% endif %}
     </div>
+  </div>
   </div>
 </div>
