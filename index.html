@@ -2,8 +2,32 @@
 layout: default
 title:  'Welcome'
 ---
+<div class="d-flex min-vh-100" id="splash-img">
+	<div class="align-self-center text-center text-light col-md-8 offset-md-2">
+		<div class="d-block mb-4">
+			<div editable="rich">
+				<h1 class="display-1 fw-bolder">Tridentu Linux</h1>
+			</div>
+		</div>
 
-<div id="splash-img" class="hero fullscreen hero-img parallax-img">
+		<div class="lc-block">
+			<div editable="rich">
+				<p class="lead">A Linux distro made from scratch for the desktop - all while looking good doing it.</p>
+
+			</div>
+		</div>
+
+		<div class="d-block">
+			<svg onclick="this.closest('section').nextElementSibling.scrollIntoView({ behavior: 'smooth'  });" width="4em" height="4em" viewBox="0 0 16 16" class="text-light" fill="currentColor" xmlns="http://www.w3.org/2000/svg" lc-helper="svg-icon">
+				<path fill-rule="evenodd" d="M8 15A7 7 0 1 0 8 1a7 7 0 0 0 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"></path>
+				<path fill-rule="evenodd" d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z"></path>
+			</svg>
+
+		</div>
+	</div>
+</div>
+
+<!--<div id="splash-img" class="hero fullscreen hero-img parallax-img">
   <div class="hero-body">
     <div class="content">
       <h1 class="uppercase white title">Welcome to Tridentu Linux!</h1>
@@ -12,7 +36,7 @@ title:  'Welcome'
       </h3>
     </div>
   </div>
-</div>
+</div>-->
 <div class="divider" data-content="Key Traits"></div>
 <div class="row">
   <div class="col-4">
