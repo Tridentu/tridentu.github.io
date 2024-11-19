@@ -91,15 +91,16 @@ title:  'Welcome'
 <div class="row">
 {% for post in paginator.posts %}
    <div class="col-4">
-      <div class="card">
+      <div class="card" style="width: 18rem;">
         <div class="card__container">
-          <a href="{{ post.url }}" class="card__image" style="background-color: #4643e2;"></a>
-        </div>
-        <div class="card-header">
-          {{ post.title }} By {{ post.author }}
+          <img class="card-image top" style="background-color: #4643e2;"></a>
         </div>
          <div class="card-body">
+            <h5 class="card-title">
+                  {{ post.title }} By {{ post.author }}
+            </h5>
             <p class="card-text">{{ post.excerpt }}</p>
+            <a href="{{ post.url }}" class="btn btn-primary"></a>
         </div>
         <div class="card__footer content">{{ post.date | date_to_string: "ordinal", "US"  }}</div>
       <div>
