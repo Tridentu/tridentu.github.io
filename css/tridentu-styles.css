@@ -3,7 +3,11 @@
 			color: #2e3440;
 		}
 		#splash-img {
-			background-image: url("../images/mountain.jpg");
+			background: url("../images/cpucity.png") center / cover no-repeat;
+			background-color:#444;
+			background-blend-mode: overlay;
+
+
 		}
 		.white {
 			color: #eceff4;
