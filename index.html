@@ -95,22 +95,15 @@ title:  'Welcome'
 <div class="row">
 {% for post in paginator.posts %}
    <div class="col-4">
-      <div class="card slide-up">
+      <div class="card">
         <div class="card__container">
           <a href="{{ post.url }}" class="card__image" style="background-color: #4643e2;"></a>
         </div>
-        <div class="card__mobile-title">
-            <div class="content">
-                <div class="tile">
-                    <div class="tile__container">
-                        <p class="tile__title">{{ post.title }}</p>
-                        <p class="tile__subtitle">By {{ post.author }}</p>
-                    </div>
-                </div>
-            </div>
+        <div class="card-header">
+          {{ post.title }} By {{ post.author }}
         </div>
-         <div class="card__body content">
-            <p>{{ post.excerpt }}</p>
+         <div class="card-body">
+            <p class="card-text">{{ post.excerpt }}</p>
         </div>
         <div class="card__footer content">{{ post.date | date_to_string: "ordinal", "US"  }}</div>
       <div>
