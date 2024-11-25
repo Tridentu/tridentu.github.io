@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Switching to Bootstrap
-author: Tridentu Group
+author: Aerodos12
 ---
 
 The site has used Cirrus UI for a long time. However, it's not the most feature-rich experience that it could have.
