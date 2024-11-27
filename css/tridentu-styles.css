@@ -6,7 +6,8 @@
 			 --bs-tertiary-bg: #e5e9f0;
 			 --bs-primary: #5e81ac;
 			 --bs-dark: #2e3440;
-			 --bs-btn-bg: var(--bs-primary);
+			 --bs-btn-bg: #5e81ac;
+			 --bs-body-font-family: "Fantasque Sans Mono";
 		}
 
 		.header {
