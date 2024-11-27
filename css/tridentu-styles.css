@@ -1,6 +1,7 @@
 		:root {
 			 --bs-body-color: #2e3440;
-			 --bs-body-bg: #e5e9f0;
+			 --bs-body-bg: #eceff4;
+			 --bs-tertiary-bg: #e5e9f0;
 		}
 
 		.header {
