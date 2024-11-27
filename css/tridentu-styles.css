@@ -6,6 +6,7 @@
 			 --bs-tertiary-bg: #e5e9f0;
 			 --bs-primary: #5e81ac;
 			 --bs-dark: #2e3440;
+			 --bs-btn-color: var(--bs-primary);
 		}
 
 		.header {
