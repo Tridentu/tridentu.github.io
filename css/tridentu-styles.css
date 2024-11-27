@@ -4,6 +4,8 @@
 			 --bs-secondary-color: #3b4252;
 			 --bs-secondary-bg: #d8dee9;
 			 --bs-tertiary-bg: #e5e9f0;
+			 --bs-primary: #5e81ac;
+			 --bs-dark: #2e3440;
 		}
 
 		.header {
