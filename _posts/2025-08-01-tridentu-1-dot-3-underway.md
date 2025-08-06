@@ -67,3 +67,7 @@ As of August 3rd, 2025, ExFAT support is installed on the main copy. No more pro
 ## Online Accounts (UPDATE)
 
 Online Accounts (the KCM) has been added into Tridentu 2 (1.3) as of August 4th, 2025. It allows users to connect to OwnCloud or NextCloud. Currently, Google is unsupported due to an unknown glitch.
+
+## A More Secure Kernel (UPDATE)
+
+SGX and Shadow Stack are now enabled on the Tridentu Linux kernel. This means that hackers will have a harder time trying to brick your computer.
