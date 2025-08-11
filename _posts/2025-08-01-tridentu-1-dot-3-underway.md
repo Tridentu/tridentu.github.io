@@ -26,6 +26,10 @@ Caravel PM's development will continue as planned. Caravel will also receive the
 - dependency support
 - repo db tools
 
+### UPDATE
+
+Caravel-PM Dependencies are now possible.
+
 ## Improved Manual
 Tridentu 2 1.3 will receive a newer, improved manual that will be more readable and better suited to the distro. It will include information about using Caravel, using the distro's builtin themes (KDE) and more.
 
@@ -68,6 +72,11 @@ As of August 3rd, 2025, ExFAT support is installed on the main copy. No more pro
 
 Online Accounts (the KCM) has been added into Tridentu 2 (1.3) as of August 4th, 2025. It allows users to connect to OwnCloud or NextCloud. Currently, Google is unsupported due to an unknown glitch.
 
-## A More Secure Kernel (UPDATE)
+## A More Secure Distro (UPDATE)
 
-SGX and Shadow Stack are now enabled on the Tridentu Linux kernel. This means that hackers will have a harder time trying to brick your computer.
+SGX and Shadow Stack are now enabled on the Tridentu Linux kernel. Also, AppArmor has been enabled by default. This all means that hackers will have a harder time trying to brick your computer.
+
+
+## Thunderbolt! (UPDATE)
+
+The program boltd has been installed on the main copy of Tridentu 2 (1.3). this allows for the use of Thunderbolt on PCs and Macs with Tridentu 2 installed.
