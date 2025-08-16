@@ -7,7 +7,7 @@ layout: default
 <h3>Releases</h3>
 
 {% for category in site.categories %}
-  {% if category == 'releases' %}
+  {% if category[0] == 'releases' %}
       {% for post in category[1] %}
 
     <div class="col-6">
