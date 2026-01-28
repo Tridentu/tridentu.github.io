@@ -1,0 +1,658 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>TRidentu 2 Live ISO (TRLIS) Specification - Tridentu Linux</title>
+
+   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" >
+   <meta name="viewport" content="height=device-height, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+   <link rel="stylesheet" href="fonts/fontawesome-free-5.15.4-web/css/all.min.css"/>
+   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#eceff4">
+   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+   <meta name="color-scheme" content="light dark">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="/css/tridentu-styles.css"/>
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+   <script src="/js/bootstrap.bundle.min.js"></script>
+	<link rel="manifest" href="/manifest.webmanifest">
+<script async src="https://cdn.jsdelivr.net/npm/pwacompat" crossorigin="anonymous"></script>
+<link rel="icon" type="image/png" href="/images/icons/icon-48x48.png" sizes="48x48" />
+</head>
+<body>
+<header class="text-bg-light bg-light">
+ <nav class="navbar navbar-expand" data-bs-theme="light">
+   <div class="container-fluid">
+	   <a class="navbar-brand" href="">
+	       <img src="/images/tridentur.svg" width="32" height="32" />
+		   <span class="title">Tridentu Linux</span>
+	   </a>
+	   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+			<li class="nav-item">
+				<a class="nav-link" href="/">
+					Home
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/features">
+					Features
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/tridentu-wiki">
+					Wiki
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/changelogs">
+					Release Notes
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/trlis/">
+					Specifications
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/download">
+					Download
+				</a>
+			</li>
+			</ul>
+	   </div>
+	 </div>
+	</nav>
+</header>
+
+	<div class="container-fluid">
+        <h1 id="software-requirements-specification">Software Requirements Specification</h1>
+<h2 id="for-tridentu-2-live-iso-trlis">For TRidentu 2 Live ISO (TRLIS)</h2>
+
+<p>Version 1.0<br />
+Prepared by Aerodos12 
+Tridentu Group
+Monday January 26th, 2026</p>
+
+<h2 id="table-of-contents">Table of Contents</h2>
+<!-- TOC -->
+<ul>
+  <li><a href="#1-introduction">1. Introduction</a>
+    <ul>
+      <li><a href="#11-document-purpose">1.1 Document Purpose</a></li>
+      <li><a href="#12-product-scope">1.2 Product Scope</a></li>
+      <li><a href="#13-definitions-acronyms-and-abbreviations">1.3 Definitions, Acronyms, and Abbreviations</a></li>
+      <li><a href="#14-references">1.4 References</a></li>
+      <li><a href="#15-document-overview">1.5 Document Overview</a></li>
+    </ul>
+  </li>
+  <li><a href="#2-product-overview">2. Product Overview</a>
+    <ul>
+      <li><a href="#21-product-perspective">2.1 Product Perspective</a></li>
+      <li><a href="#22-product-functions">2.2 Product Functions</a></li>
+      <li><a href="#23-product-constraints">2.3 Product Constraints</a></li>
+      <li><a href="#24-user-characteristics">2.4 User Characteristics</a></li>
+      <li><a href="#25-assumptions-and-dependencies">2.5 Assumptions and Dependencies</a></li>
+      <li><a href="#26-apportioning-of-requirements">2.6 Apportioning of Requirements</a></li>
+    </ul>
+  </li>
+  <li><a href="#3-requirements">3. Requirements</a>
+    <ul>
+      <li><a href="#31-external-interfaces">3.1 External Interfaces</a></li>
+      <li><a href="#32-functional">3.2 Functional</a></li>
+      <li><a href="#33-quality-of-service">3.3 Quality of Service</a></li>
+      <li><a href="#34-compliance">3.4 Compliance</a></li>
+      <li><a href="#35-design-and-implementation">3.5 Design and Implementation</a></li>
+      <li><a href="#36-aiml">3.6 AI/ML</a></li>
+    </ul>
+  </li>
+  <li><a href="#4-verification">4. Verification</a></li>
+  <li><a href="#5-appendixes">5. Appendixes</a>
+<!-- TOC --></li>
+</ul>
+
+<h2 id="revision-history">Revision History</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Reason For Changes</th>
+      <th>Version</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="1-introduction">1. Introduction</h2>
+<p>➥ Briefly summarize the SRS’s purpose, product scope, intended audience, and how the document is organized. Do not include details here; reference the relevant sections instead.</p>
+
+<p>This document is meant for detailing and explaining the style and requirements for building a proper Tridentu 2 ISO-based system. The TRLIS standard will cover both the installed system and the ISO version as well. This document is <strong>ALWAYS</strong> meant for anyone (developers, engineers and end-users) to read and eventually understand.</p>
+
+<h3 id="11-document-purpose">1.1 Document Purpose</h3>
+
+<p>The TRidentu Live ISO Specification (or TRLIS) is a set of rules (a.k.a style guide, like PEP 8) that details how the Tridentu ISO is to be built as well as how its contents are to be installed/managed. This specification/style guide is meant for engineers/developers (for Contributions) and end-users (to understand their system at a deeper level).</p>
+
+<h3 id="12-product-scope">1.2 Product Scope</h3>
+
+<p>Tridentu 2 (via TRLIS) uses a “release-code” system that defines <strong>3 MAJOR</strong> components:</p>
+
+<ol>
+  <li>The UI environment used (i.e CT for Linux Console, K for KDE, etc.)</li>
+  <li>Purpose (Optional Component that defines best/dominant use case - i.e. KG for Gaming via KDE)</li>
+  <li>Version Number (i.e 1.5)</li>
+</ol>
+
+<p>Tridentu 2 is mainly a Linux distro with influences from other systems (such as BSD) considered. The CT version is <strong>ALWAYS</strong> the baseline, so most of those critical standards found in that will be listed here. anything with K or G as the first letter (except in GT) are usually desktop environments. Anything after that defines capabilities by purpose (i.e. KG would support gaming and come with WINE pre-installed). The goal of all this is to standardize and streamline a new ISO production pipeline that allows for flexible upgrades/releases.</p>
+
+<h3 id="13-definitions-acronyms-and-abbreviations">1.3 Definitions, Acronyms, and Abbreviations</h3>
+
+<p>💡 Tips:</p>
+<ul>
+  <li>Include terms that impact interpretation of requirements (e.g., “user,” “tenant,” “near real-time”).</li>
+  <li>Keep entries alphabetized and consistent across the document set.</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th>Term</th>
+      <th>Definition</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>API</td>
+      <td>Application Programming Interface - A set of definitions and protocols for building and integrating application software</td>
+    </tr>
+    <tr>
+      <td>BTRFS</td>
+      <td>B-TRee FS - A filesystem that a modern, copy-on-write (CoW) filesystem for Linux designed for advanced storage, high capacity, and data integrity.</td>
+    </tr>
+    <tr>
+      <td>CT</td>
+      <td>Console Terminal - A variant of Tridentu 2 (1.5+) that only uses the Linux console. It is also the smallest variant to be commissioned for creation/official use.</td>
+    </tr>
+    <tr>
+      <td>DE</td>
+      <td>Desktop Environment - A complete graphical interface (GUI) that provides a user-friendly way to interact with an operating system.</td>
+    </tr>
+    <tr>
+      <td>SRS</td>
+      <td>Software Requirements Specification - A document that describes the intended purpose, requirements, and nature of a software</td>
+    </tr>
+    <tr>
+      <td>TR2RC</td>
+      <td>TRidentu 2 Release Code - a 3-part set of letters and numbers that define the UI environment, purpose and/or version of the distro</td>
+    </tr>
+    <tr>
+      <td>TRLIS</td>
+      <td>TRidentu 2 Live ISO Specification - A set of rules and standards that keep Tridentu 2’s development from stalling</td>
+    </tr>
+    <tr>
+      <td>UI</td>
+      <td>User Interface - The visual part of computer application through which a user interacts with a software</td>
+    </tr>
+    <tr>
+      <td>WINE</td>
+      <td>WINE - A Windows Emulation layer that only comes on Gaming-based variants of Tridentu 2.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="14-references">1.4 References</h3>
+
+<p>➥ Cite standards, contracts, policies, interface specs, UX style guides, use-case docs, architectural decisions, or a vision/scope document. For each reference, include title, author/owner, version, date, and location/URL. Indicate whether each reference is normative (binding) or informative (guidance).</p>
+
+<p>Most References will be listed below from this document. The reason for that is due to the fact that the standards come directly from here. Anything else will have a page linked to it.</p>
+
+<ol>
+  <li>G. Beekmans, <em>Linux From Scratch</em>. Linux From Scratch. [Online]. Available: <a href="https://www.linuxfromscratch.org/lfs/view/stable-systemd/index.html">https://www.linuxfromscratch.org/lfs/view/stable-systemd/index.html</a>. Accessed: Jan. 26, 2026.</li>
+  <li>Mina[@yes_i_cane], “Understanding Braille Notetakers for Blind Users,” TikTok, Jun. 17, 2025. Available: <a href="https://www.tiktok.com/@yes_i_cane/video/7517025924278160695">https://www.tiktok.com/@yes_i_cane/video/7517025924278160695</a> [Accessed: Jan. 26, 2026] [Online Video]</li>
+</ol>
+
+<p>The following references are normative:</p>
+
+<ul>
+  <li>Reference #1</li>
+  <li>Reference #2</li>
+</ul>
+
+<h3 id="15-document-overview">1.5 Document Overview</h3>
+
+<ul>
+  <li>The overview section focuses on how everything in this document comes together regarding requirements.</li>
+  <li>The perspective section focuses on the history/vision being Tridentu 2</li>
+  <li>The functions section focuses on the main objectives of each planned/available Tridentu 2 variant</li>
+  <li>The constraints section focuses on what is and is not allowed regarding build the distro.</li>
+</ul>
+
+<h2 id="2-product-overview">2. Product Overview</h2>
+
+<h3 id="21-product-perspective">2.1 Product Perspective</h3>
+<p>Tridentu 2 was created mainly to learn about how Linux systems such as Fedora, Arch, Debian and Gentoo are built/created. as a result, this system follows most if not all instructions to the letter in Linux From Scratch.</p>
+
+<h3 id="22-product-functions">2.2 Product Functions</h3>
+
+<p>Tridentu 2 as a Linux distribution provides the following:</p>
+
+<ul>
+  <li>Enhanced use of GNU/Linux out of the box, <strong>ESPECIALLY</strong> on graphical or DE versions.</li>
+  <li>Support for various file systems (including BTRFS)</li>
+  <li>Networking Support</li>
+  <li>TUI Installer for <strong>ALL VERSIONS</strong></li>
+  <li>Package Management for optional programs and libraries.</li>
+  <li>Advanced, yet convenient system management (whether via dkms, zram-generator or even genfstab).</li>
+</ul>
+
+<h3 id="23-product-constraints">2.3 Product Constraints</h3>
+
+<p>Each constraint is coded by C followed by a number. It is also prefixed with “TRLIS”. All constraints below <strong>(unless otherwise stated)</strong> are <em>BOTH INTERNAL AND EXTERNAL</em>.</p>
+
+<ul>
+  <li>TRLIS-C01: <strong>ALL</strong> Tridentu 2 systems <em>MUST</em> have Systemd as the default init system due to constraints on the others regard the DE variants (i,e. GNOME, KDE, etc.). Other init systems <strong>may</strong> be packaged using either Caravel <strong>OR</strong> dpkg. This is <em>MANDATORY</em>.</li>
+  <li>TRLIS-C02: <strong>EVERY</strong> version of Tridentu 2 <em>MUST</em> start out with a CT (or Linux Console/Console-Terminal) variant. it is usually marked as CT-{version} and can hold the following variants of itself:
+    <ul>
+      <li>CTS (Server Edition)</li>
+      <li>CTD (Derivative/Developer Edition)
+This is <em>MANDATORY</em>.</li>
+    </ul>
+  </li>
+  <li>TRLIS-C03: Accessibility Sofware/Systems <em>MUST</em> be provided for every version’s CT variant. This also carries over to <strong>ANY</strong> derivative variant of CT (even without the letters). This is <em>MANDATORY</em>.</li>
+  <li>TRLIS-C04: NetworkManager <em>MUST</em> come with the CT variant. For security reasons, this is <em>MANDATORY</em>.</li>
+  <li>TRLIS-C05: Per TRLIS-C03, Bluetooth <em>MUST</em> <strong>ALSO</strong> be supported. This is to support <strong>ANY</strong> Braille reader/writer that uses Bluetooth. This is <em>MANDATORY</em>.</li>
+  <li>TRLIS-C06: DKMS <em>MUST</em> be pre-installed. This is to adhere to the “advanced, yet convenient” principle of the Tridentu 2 Philosophy. This is <em>MANDATORY</em>.</li>
+  <li>TRLIS-C07: Power awareness (power management usage being key) is a <em>MUST</em> on the baseline CT system. This means that programs such as power-profiles-daemon are to be preinstalled <strong>EVERYWHERE</strong>. This is <em>MANDATORY</em>.</li>
+  <li>TRLIS-C08: The shell on the <em>user</em> (no root) side <em>MUST</em> be friendly to said user. Unless <strong>HEAVILY</strong> modified for ease of use, Bash is <strong>NOT</strong> acceptable as such a shell. Fish is disqualified also from this due to the lack of POSIX compliance. This is <em>MANDATORY</em>.</li>
+  <li>TRLIS-C09: The system shell (underlying <strong>AND</strong> root-based) should ALWAYS be bash. This is <em>MANDATORY</em>.</li>
+  <li>TRLIS-C10: Development tools necessary for the baseline (CT) <em>MUST</em> remain on the system if it is deemed “useful” for the end user in education (STEM education, specifically). Examples include GCC, Ruby, Python, LLVM, Git, etc. This is <em>CONDITIONALLY MANDATORY</em> (depends on the software in question).</li>
+  <li>TRLIS-C11: All variants of the distribution <em>MUST</em> use dracut as the starting initramfs. Also, the absence of an initramfs system is <strong>STRICTLY PROHIBITED</strong>. Alternatives can be packaged for optional use, but this is <em>MANDATORY</em>.</li>
+  <li>TRLIS-C12: There should be a font that is readable and unique to the distribution. This is <em>PREFERRED</em>.</li>
+  <li>TRLIS-C13: There <em>MUST</em> always be i386 BIOS modules present for use with GRUB. This is <em>MANDATORY</em>.</li>
+  <li>TRLIS-C14: There <em>MUST</em> always be Linux-PAM present and in use with shadow as the main security/authentication system. This is <em>MANDATORY</em>.</li>
+  <li>TRLIS-C15: All variants and derivatives <em>MUST</em> come with some sort of web browser. This is <em>MANDATORY</em>.</li>
+  <li>TRLIS-C16: All variants and derivatives <em>MUST</em> support FUSE (Filesystem in USERspace). This is <em>MANDATORY</em>.</li>
+  <li>TRLIS-C17: All variants <em>MUST</em> have Systemd built with sysusers support. This is <em>MANDATORY</em>.</li>
+  <li>TRLIS-C18: All variants <em>MUST</em> be capable of fetch SSL sertificates. This is <em>MANDATORY</em>.</li>
+  <li>TRLIS-C19: All variants <em>MUST</em> be ISO’d with autologin enabled on the following programs:
+    <ol>
+      <li>sudo</li>
+      <li>Linux console login
+This is <em>MANDATORY</em>.</li>
+    </ol>
+  </li>
+  <li>TRLIS-C20: Certain files (such as Squash Images) <em>MUST</em> be viewable on any variant/derivative. This is <em>MANDATORY</em>.</li>
+  <li>TRLIS-C21:  The directories  <code class="language-plaintext highlighter-rouge">/usr/lib64</code>, <code class="language-plaintext highlighter-rouge">/usr/libx32</code> and <code class="language-plaintext highlighter-rouge">/opt/lib</code> <em>MUST</em>  be included in every Tridentu 2 variant/derivative. This is (for compatibility reasons) <em>MANDATORY</em> .</li>
+</ul>
+
+<p>📝 Note:
+Requirements (Section 3) defines verifiable system obligations—specific behaviors or qualities the system shall exhibit in order to satisfy limits described in this section.</p>
+
+<h3 id="24-user-characteristics">2.4 User Characteristics</h3>
+<p>💬 <em>Defines the user groups and the attributes that affect requirements.</em></p>
+
+<p>There are mainly 3 types of Tridentu 2 users that are intended.</p>
+
+<h4 id="241-the-college-student">2.4.1 The College Student</h4>
+
+<p>This user cares about two main things:</p>
+<ol>
+  <li>Accuracy</li>
+  <li>Productivity</li>
+</ol>
+
+<p>Accuracy implies that the College Student wants to turn in assignments properly, with integiry <strong>AND</strong> on time. The main reason why Chrony is used instead of systemd-timesyncd is to prevent issues where timezone differences may interfere (cush as submitting an assignment to a professor).</p>
+
+<p>Productivity is obvious - the College student wants to be able to use Tridentu 2 (or <em>ANY</em> distro following the Tridentu 2 Philosophy) in a way that can help them learn and succeed in school.</p>
+
+<h4 id="242-the-developer">2.4.2 The Dev(eloper)</h4>
+
+<p>This user cares about development of programs. They want to ensure that they can plan and even jump into coding almost immediately. To cater to this specific user, the Tridentu 2 distro comes with <em>various</em> development tools and languages builtin to the system when installed. One of those is GCC.</p>
+
+<h3 id="25-assumptions-and-dependencies">2.5 Assumptions and Dependencies</h3>
+<p>💬 <em>External assumed factors or conditions, as opposed to known facts, that the project relies on.</em></p>
+
+<p>➥ List assumptions about environment, hardware, usage patterns, third-party components/services, and organizational support. List dependencies on external systems, libraries, or teams. For each, indicate potential impact if proven false.</p>
+
+<p>💡 Tips:</p>
+<ul>
+  <li>Link assumptions to risk register with owner and mitigation when available.</li>
+</ul>
+
+<h3 id="26-apportioning-of-requirements">2.6 Apportioning of Requirements</h3>
+<p>💬 <em>Allocation of requirements across components or increments.</em></p>
+
+<p>➥ Map major requirements to subsystems, services, or releases/iterations. Use a cross-reference table to show allocation and to clearly identify deferred requirements.</p>
+
+<p>💡 Tips:</p>
+<ul>
+  <li>Note unknown allocations explicitly and track as follow-ups.</li>
+</ul>
+
+<h2 id="3-requirements">3. Requirements</h2>
+<p>💬 <em>This section specifies <strong>verifiable</strong> requirements of the software product to enable design and testing.</em></p>
+
+<p>➥ State requirements to a level of detail sufficient for design and verification. Use unique identifiers, consistent keywords (shall/should/may), and clear conditions. Describe inputs, processing in response, and outputs where applicable. Reference the relevant 2.3 Product Constraints that the requirement addresses.</p>
+
+<p>📃 Template (applies to <strong>all</strong> requirements):</p>
+<div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">-</span> ID: REQ-FUNC-001
+<span class="p">-</span> Title: Short title, representative of the requirement...
+<span class="p">-</span> Statement: The system shall...
+<span class="p">-</span> Rationale: ...
+<span class="p">-</span> Acceptance Criteria: ...
+<span class="p">-</span> Verification Method: Test | Analysis | Inspection | Demonstration | Other
+<span class="p">-</span> More Information: Additional context. Links to related artifacts.
+</code></pre></div></div>
+
+<p>Requirement ID schema and traceability:</p>
+<ul>
+  <li>ID format: REQ-[AREA]-[NNN]-[VER] (optional -[VER] if versioned), where AREA ∈ {FUNC, INT, PERF, SEC, REL, AVAIL, OBS, COMP, INST, BUILD, DIST, MAINT, REUSE, PORT, COST, DEAD, POC, CM, ML}.</li>
+  <li>Uniqueness: IDs must be unique and immutable; changes increment -[VER] and are recorded in Revision History.</li>
+  <li>Traceability: Each test artifact may reference the requirement ID.</li>
+</ul>
+
+<p>💡 Tips:</p>
+<ul>
+  <li>Make each requirement testable and unambiguous, using standard metrics and avoiding vague terms (e.g., “user-friendly,” “fast”).</li>
+</ul>
+
+<h3 id="31-external-interfaces">3.1 External Interfaces</h3>
+<p>💬 <em>Specifies all external inputs and outputs, covering both required and provided interfaces.</em></p>
+
+<p>➥ Provide interface definitions sufficient for implementation and test.</p>
+
+<p>💡 Tips:</p>
+<ul>
+  <li>Use interface control documents or schemas where appropriate and reference them here.</li>
+</ul>
+
+<h4 id="311-user-interfaces">3.1.1 User Interfaces</h4>
+<p>💬 <em>Describes how users interact with the system at a logical level.</em></p>
+
+<p>➥ Define UI elements, flows, and standards to be followed (style guides, accessibility guidelines). Include layout constraints, common controls (e.g., help, search), keyboard shortcuts, error/empty-state behavior, and localization. Keep visual designs in a separate UI specification and reference them.</p>
+
+<p>💡 Tips:</p>
+<ul>
+  <li>Reference accessibility standards (e.g., WCAG) and platform-specific guidelines.</li>
+  <li>Consider organizing into subcategories for clarity: Usability/Accessibility (inputs/outputs and dialogs to fit user abstractions, abilities, and expectations), and Convenience.</li>
+</ul>
+
+<h4 id="312-hardware-interfaces">3.1.2 Hardware Interfaces</h4>
+<p>💬 <em>Details interactions with physical devices and platforms.</em></p>
+
+<p>➥ Specify (un)supported device types, data/control signals, electrical or mechanical characteristics if relevant, and communication protocols. Include timing, throughput, and reliability expectations.</p>
+
+<p>💡 Tips:</p>
+<ul>
+  <li>Reference applicable hardware specs and certification requirements.</li>
+</ul>
+
+<h4 id="313-software-interfaces">3.1.3 Software Interfaces</h4>
+<p>💬 <em>Defines integrations with other software components and services.</em></p>
+
+<p>➥ List connected systems (name and version), required or provided services/APIs, data items/messages exchanged, communication styles/protocols, and limit/error/timeout semantics. Identify shared data and ownership.</p>
+
+<p>💡 Tips:</p>
+<ul>
+  <li>Capture versioning and backward compatibility policies.</li>
+  <li>Define authentication/authorization expectations for each integration.</li>
+</ul>
+
+<h3 id="32-functional">3.2 Functional</h3>
+<p>💬 <em>Specifies the externally observable behaviors and functions the software shall provide.</em></p>
+
+<p>➥ Organize functional requirements by feature, use case, or service. For each, describe triggers/inputs, processing/logic (at a black-box level), outputs, and error conditions. For AI behaviors, define determinism bounds (e.g., temperature), refusal criteria, safety rules, and human review points.</p>
+
+<p>💡 Tips:</p>
+<ul>
+  <li>Include edge cases and negative scenarios for completeness.</li>
+  <li>For AI features, include fallback behaviors and thresholds for abstention.</li>
+</ul>
+
+<h3 id="33-quality-of-service">3.3 Quality of Service</h3>
+<p>💬 <em>Quality attributes that constrain or qualify functional behavior.</em></p>
+
+<p>➥ Use specific metrics, ranges, and conditions.</p>
+
+<p>💡 Tips:</p>
+<ul>
+  <li>When a quality applies only to a subset of functions, reference the related requirement IDs.</li>
+  <li>Provide rationale when targets cut across functions to aid trade-off decisions.</li>
+</ul>
+
+<h4 id="331-performance">3.3.1 Performance</h4>
+<p>💬 <em>Response time, throughput, and resource usage expectations.</em></p>
+
+<p>➥ Specify timing relationships, peak/steady-state loads, and performance targets under expected conditions. Include measurement methods, environments, and acceptance thresholds. Note any real-time constraints.</p>
+
+<p>💡 Tips:</p>
+<ul>
+  <li>Include scalability targets and capacity planning assumptions.</li>
+  <li>Consider organizing into subcategories for clarity: Time (latency, throughput, etc.) and Space (memory, storage, bandwidth, etc.).</li>
+</ul>
+
+<h4 id="332-security">3.3.2 Security</h4>
+<p>💬 <em>Defines the protection of data, identities, and operations.</em></p>
+
+<p>➥ Define authentication, authorization, data protection (in transit/at rest), auditing, and privacy requirements. Address abuse/misuse and external attacks (e.g., injection, data exfiltration, or service compromise), and include secure defaults and incident response requirements.</p>
+
+<p>💡 Tips:</p>
+<ul>
+  <li>Distinguish mandatory controls vs. recommended practices.</li>
+  <li>Consider organizing into subcategories for clarity: Safety (harmful external outcomes), Confidentiality (disclose data to unauthorized parties), Privacy (private data disclosed without consent), Integrity (data modified without authorization), and Availability (authorized data or resources made available when requested).</li>
+</ul>
+
+<p>📝 Note:
+Place generic security controls here (3.3.2), and cross-reference from supported controls as necessary:</p>
+<ul>
+  <li>Use 3.1 External Interfaces for interface-level validation and secure protocols.</li>
+  <li>Use 3.4 Compliance for regulatory/contractual obligations and audit evidence.</li>
+  <li>Use 3.6 AI/ML for model-specific runtime protections and data governance.</li>
+</ul>
+
+<h4 id="333-reliability">3.3.3 Reliability</h4>
+<p>💬 <em>Ability to consistently perform as specified.</em></p>
+
+<p>➥ Specify reliability metrics and techniques (e.g., MTBF, error budgets, retry/backoff, idempotency, redundancy). Define conditions under which reliability is assessed and any failover behaviors. Define graceful degradation (e.g., fallback components, cached results, AI/ML deterministic heuristics), timeout/abstain policies, and rollback to previous versions.</p>
+
+<h4 id="334-availability">3.3.4 Availability</h4>
+<p>💬 <em>System uptime and readiness to deliver service.</em></p>
+
+<p>➥ Define availability targets, maintenance windows, and mechanisms like checkpointing, recovery, and restart. Include geographical/zone redundancy if applicable.</p>
+
+<p>💡 Tips:</p>
+<ul>
+  <li>Express availability in terms meaningful to users (e.g., downtime per month) and tie to SLAs/SLOs.</li>
+  <li>Capture scale-out/in behavior affecting availability (e.g., max failover time, quorum constraints).</li>
+</ul>
+
+<h4 id="335-observability">3.3.5 Observability</h4>
+<p>💬 <em>Ability to understand system state and behavior in production through telemetry.</em></p>
+
+<p>➥ Define requirements for logs, metrics, traces, and profiling: events/fields, cardinality limits, sampling, retention, and privacy/PII handling in telemetry. Specify standard labels (e.g., service, version, tenant), correlation/trace IDs propagation, and redaction policies. State SLO-aligned alert rules, dashboards, and ownership.</p>
+
+<p>💡 Tips:</p>
+<ul>
+  <li>Avoid maintenance-process details (keep runbooks and on-call policies in 3.5.4 Maintainability).</li>
+</ul>
+
+<h3 id="34-compliance">3.4 Compliance</h3>
+<p>💬 <em>Requirements derived to satisfy external standards, regulations, or contracts.</em></p>
+
+<p>➥ Specify mandated formats, naming conventions, accounting procedures, provider/user rights and agreements, licensing agreements, audit tracing, records retention, and reporting. For each compliance item, reference 2.3 Product Constraints if applicable, or cite the authoritative source directly.</p>
+
+<h3 id="35-design-and-implementation">3.5 Design and Implementation</h3>
+<p>💬 <em>Constraints or mandates affecting how the solution is designed, deployed, and maintained.</em></p>
+
+<h4 id="351-installation">3.5.1 Installation</h4>
+<p>💬 <em>Ensures the software runs smoothly in its target environments.</em></p>
+
+<p>➥ Define (un)supported platforms/environments, prerequisites, installation methods, environment configuration (e.g., env vars, secrets), and rollback/uninstall procedures.</p>
+
+<p>💡 Tips:</p>
+<ul>
+  <li>Detail automation expectations (e.g., IaC, installer scripts, container images).</li>
+  <li>Keep scaling mechanics (topology, multi-region) in 3.5.3 Distribution; keep scaling targets in 3.3 QoS.</li>
+</ul>
+
+<h4 id="352-build-and-delivery">3.5.2 Build and Delivery</h4>
+<p>💬 <em>Defines the controls for building, packaging, and delivering software artifacts to ensure integrity, traceability, and reproducibility.</em></p>
+
+<p>➥ Define how source code is transformed into deployable artifacts and moved through environments. Describe expectations for build reproducibility, dependency management, licensing, configuration management, artifact verification, and release promotion.</p>
+
+<p>💡 Tips:</p>
+<ul>
+  <li>Cross-reference 3.5.1 Installation and 3.5.10 Change Management for environment setup, versioning, and release traceability.</li>
+  <li>Avoid operational topology details (those belong in 3.5.3 Distribution).</li>
+</ul>
+
+<h4 id="353-distribution">3.5.3 Distribution</h4>
+<p>💬 <em>Addresses geographically or organizationally distributed deployments, data, and devices.</em></p>
+
+<p>➥ Specify deployment topologies, component and data distribution/replication approaches and scale-out runbooks, and constraints imposed by organizational or network structure.</p>
+
+<h4 id="354-maintainability">3.5.4 Maintainability</h4>
+<p>💬 <em>Attributes that make the software easier to modify, fix, and evolve.</em></p>
+
+<p>➥ Define expectations for modularity, code complexity, interfaces, coding standards, developer oriented observability, documentation, software delivery performance, and technical debt management.</p>
+
+<h4 id="355-reusability">3.5.5 Reusability</h4>
+<p>💬 <em>Encourages leveraging components across products or contexts when appropriate.</em></p>
+
+<p>➥ Identify components intended for reuse and any constraints on their dependencies or technology choices. Specify modularization, API stability, packaging, and documentation to enable reuse.</p>
+
+<h4 id="356-portability">3.5.6 Portability</h4>
+<p>💬 <em>Ability to run on multiple platforms or environments with minimal changes.</em></p>
+
+<p>➥ Specify (un)supported operating systems, hardware architectures, cloud providers, or container runtimes. Define abstraction layers, configuration policies, and externalization of environment-specific settings.</p>
+
+<h4 id="357-cost">3.5.7 Cost</h4>
+<p>💬 <em>Financial considerations or cost targets.</em></p>
+
+<p>➥ State budgetary limits, cost-per-transaction targets, licensing constraints, or cloud spend envelopes that influence design decisions.</p>
+
+<p>💡 Tips:</p>
+<ul>
+  <li>Keep costs high-level unless contractually defined.</li>
+  <li>Link to a cost model or TCO assumptions where available.</li>
+  <li>Note variable vs. fixed cost expectations impacting scaling strategies.</li>
+</ul>
+
+<h4 id="358-deadline">3.5.8 Deadline</h4>
+<p>💬 <em>Schedule expectations that affect scope and prioritization.</em></p>
+
+<p>➥ Specify key milestones, delivery dates, or phases/increments. Indicate dependencies between milestones and required readiness criteria.</p>
+
+<p>💡 Tips:</p>
+<ul>
+  <li>Use deadlines to guide apportioning of requirements (Section 2.6).</li>
+</ul>
+
+<h4 id="359-proof-of-concept">3.5.9 Proof of Concept</h4>
+<p>💬 <em>Validates feasibility and de-risks critical assumptions before full-scale delivery.</em></p>
+
+<p>➥ Define the objectives, scope, success criteria, and timebox for any POCs. Describe what will be validated (technical, usability, performance) and how results will influence requirements or design.</p>
+
+<p>💡 Tips:</p>
+<ul>
+  <li>Keep POCs narrowly focused and measurable. Focus on validation goals, not implementation details.</li>
+</ul>
+
+<h4 id="3510-change-management">3.5.10 Change Management</h4>
+<p>💬 <em>Controls how changes are introduced and communicated.</em></p>
+
+<p>➥ Define change categories (breaking, additive, bugfix), approval workflow, and required artifacts (changelogs, evaluation summaries, migration guides, release notes). Specify backward/forward compatibility guarantees, client communication plans, deprecation timelines, and rollout/rollback procedures.</p>
+
+<h2 id="4-verification">4. Verification</h2>
+<p>💬 <em>Describes how each requirement will be verified to provide objective evidence of compliance.</em></p>
+
+<p>➥ Outline verification methods (test, canary metrics, analysis, inspection, demonstration) and test evidence preferably in a matrix paralleling Section 3. Consider adding environment details, tools, and test data requirements.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Requirement ID</th>
+      <th>Verification Method</th>
+      <th>Test/Artifact Link</th>
+      <th>Status</th>
+      <th>Evidence</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>REQ-FUNC-001</td>
+      <td>test</td>
+      <td>tests/UC01.md</td>
+      <td>Passed</td>
+      <td>reports/tuc01.html</td>
+    </tr>
+    <tr>
+      <td>REQ-SEC-003</td>
+      <td>analysis</td>
+      <td>threat-model.md</td>
+      <td>WIP</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p>💡 Tips:</p>
+<ul>
+  <li>Include both positive and negative tests and include non-functional verification (performance, security, reliability).</li>
+  <li>Verification artifacts may be versioned and linked to CI/CD.</li>
+  <li>For AI, reference Model Cards and track eval datasets’ versions and ensure reproducibility of results.</li>
+</ul>
+
+<h2 id="5-appendixes">5. Appendixes</h2>
+<p>💬 <em>Optional supporting material that aids understanding without being normative.</em></p>
+
+<p>➥ Include glossaries, data dictionaries, models/diagrams, sample datasets, or change-impact analyses that support the main sections. Reference rather than duplicate content when possible.</p>
+
+<p>💡 Tips:</p>
+<ul>
+  <li>Keep appendixes organized and referenced from the main text.</li>
+</ul>
+
+    </div><!-- /.container -->  
+
+	<footer class="py-3 my-4">
+		<div class="row">
+			<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+				<li class="nav-item mb-2"><a href="/" class="nav-link px-2 text-body-secondary">Home</a></li>
+				<li class="nav-item mb-2"><a href="/features" class="nav-link px-2 text-body-secondary">Features</a></li>
+				<li class="nav-item mb-2"><a href="/changelogs" class="nav-link px-2 text-body-secondary">Changelog</a></li>
+				<li class="nav-item mb-2"><a href="https://github.com/Tridentu/tridentu2/issues" class="nav-link px-2 text-body-secondary">Issue Tracker</a></li>
+			</ul>
+		</div>
+		<p class="text-center text-body-secondary">Copyright (C) 2026</p>
+	</footer>
+	<script>
+		if ('serviceWorker' in navigator) {
+			// Use the window load event to keep the page load performant
+			window.addEventListener('load', () => {
+				navigator.serviceWorker.register('/sw.js');
+			});
+		}
+	</script>
+</body>
+</html>
