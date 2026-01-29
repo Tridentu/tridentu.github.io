@@ -154,9 +154,14 @@ Each constraint is coded by C followed by a number. It is also prefixed with "TR
 This is *MANDATORY*.
 - TRLIS-C20: Certain files (such as Squash Images) *MUST* be viewable on any variant/derivative. This is *MANDATORY*.
 - TRLIS-C21:  The directories  ```/usr/lib64```, ```/usr/libx32``` and ```/opt/lib``` *MUST*  be included in every Tridentu 2 variant/derivative. This is (for compatibility reasons) *MANDATORY* . 
-
-📝 Note:
-Requirements (Section 3) defines verifiable system obligations—specific behaviors or qualities the system shall exhibit in order to satisfy limits described in this section.
+- TRLIS-C22: The .zshrc file in /etc/skel *MUST* accomodate dealing with Xorg compilation. The same goes for the tridentulive user. This is *MANDATORY* 
+- TRLIS-C23: **NOTHING** belongs in /usr/lib64 *unless* specified. This is to avoid serious confusion regarding the installation of neccessary packages. This is *MANDATORY*.
+- TRLIS-C24: Intel support for GPUs is **ESSENTIAL**. This is mainly due to the origin point of Tridentu 2, but is also good precend for other GPU brands as well. This is *CONDITIONALLY MANDATORY* (Only time it can be disobey is due to severe obsolescence).
+- TRLIS-C25: Nouveau (NVIDIA) support *MUST* also be present. This is a reciprocal constraint, so this is *ABSOLUTELY MANDATORY*.
+- TRLIS-C26: Any third-party codecs governed under patents *MUST* be removed from **ALL** graphical distribution variants. To avoid legal trouble per the LFS Book, this is *ABSOLUTELY MANDATORY*
+- TRLIS-C27: A font collection *MUST* be present for **ALL** graphical variants of the Tridentu 2 Linux distribution. This is to ensure versatility regarding the look and feel, documents, terminal/coding use and self-expression. This is *MANDATORY* **(for Graphical variants only)**.
+- TRLIS-C28: All possible inputs *MUST* be supported. This is *ABSOLUTELY MANDATORY*.
+- TRLIS-C29: Any groups needed for certain programs to function *MUST* be alloted to the superusers. This is *ABSOLUTELY MANDATORY*.
 
 ### 2.4 User Characteristics
 💬 _Defines the user groups and the attributes that affect requirements._
@@ -208,6 +213,26 @@ This user cares about development of programs. They want to ensure that they can
 - Verification Method: Test | Analysis | Inspection | Demonstration | Other
 - More Information: Additional context. Links to related artifacts.
 ```
+### 3.1 All Constraints Met
+
+- ID: REQ-CONS-001
+- Title: All Constraints Met
+- Statement: The system shall meet the above constraints with ease. Failure to meet these requirements can result in the system being deemed inadequate.
+- Rationale: The constraints above provided a basis for what is expect of the baseline version and many others.
+- Acceptance Criteria: All constraints shall be checked off in written form for every version greater than 1.5
+- Verification Method: Inspection | Demonstration
+- More Information: N/A
+
+## 3.2 Display Server Accomodations
+
+- ID: REQ-FUNC-002
+- Title: Display Server Accomodations
+- Statement: The system shall accomodate both Wayland and Xorg out of the box.
+- Rationale: The Wayland server is the default, but some applications still use Xorg to function.
+- Acceptance Criteria: All servers should be inspected and tested for issues that impede use.
+- Verification Method: Inspection | Demonstration
+- More Information: Most required programs are included from the CT version (baseline)
+
 
 Requirement ID schema and traceability:
 - ID format: REQ-[AREA]-[NNN]-[VER] (optional -[VER] if versioned), where AREA ∈ {FUNC, INT, PERF, SEC, REL, AVAIL, OBS, COMP, INST, BUILD, DIST, MAINT, REUSE, PORT, COST, DEAD, POC, CM, ML}.
