@@ -162,6 +162,8 @@ This is *MANDATORY*.
 - TRLIS-C27: A font collection *MUST* be present for **ALL** graphical variants of the Tridentu 2 Linux distribution. This is to ensure versatility regarding the look and feel, documents, terminal/coding use and self-expression. This is *MANDATORY* **(for Graphical variants only)**.
 - TRLIS-C28: All possible inputs *MUST* be supported. This is *ABSOLUTELY MANDATORY*.
 - TRLIS-C29: Any groups needed for certain programs to function *MUST* be alloted to the superusers. This is *ABSOLUTELY MANDATORY*.
+- TRLIS-C30: The default font for graphical variants *MUST* be either Cabin or similar fonts by function (UI only). *This is CONDITIONALLY MANDATORY*.
+- TRLIS-C31: The default icon theme for graphical variants *MUST* be Papirus. Other themes but the Tridentu default can use other icon themes. This is *MANDATORY*. 
 
 ### 2.4 User Characteristics
 💬 _Defines the user groups and the attributes that affect requirements._
