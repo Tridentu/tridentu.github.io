@@ -2,6 +2,8 @@
 # site.url, site.title
 
 title: 'Tridentu Linux'
+description: "The official website for Tridentu 2 Linux."
+author: "Aerodos12"
 
 ## note: 
 #  use site.path in your templates to make it work for both protocols e.g. http and https
@@ -22,6 +24,10 @@ pages_excerpts: true
 collections:
     changelogs:
         output: true
+
+plugins:
+  - jekyll-feed
+
 
 exclude:
 - README.md
