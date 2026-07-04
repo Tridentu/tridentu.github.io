@@ -1,0 +1,12 @@
+{
+  "distro_id": "tridentu2",
+  "releases": [
+    {
+      "version": "1.5",
+      "status": "active",
+      "codename": "Alpha7",
+      "release_date": "2026-07-12",
+      "upgrade_path_allowed": true
+    }
+  ]
+}
