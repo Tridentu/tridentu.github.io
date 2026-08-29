@@ -1,99 +1,102 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-   <meta charset="utf-8">
-   <title>{{ page.title }} - {{ site.title }}</title>
+	<head>
+		<meta charset="utf-8">
+		<title>{{ page.title }} - {{ site.title }}</title>
 
-   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" >
-   <meta name="viewport" content="height=device-height, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
-   <link rel="stylesheet" href="fonts/fontawesome-free-5.15.4-web/css/all.min.css"/>
-   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#eceff4">
-   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
-   <meta name="color-scheme" content="light dark">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/css/tridentu-styles.css"/>
-   <link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
+		<link rel="stylesheet"
+		      type="text/css"
+		      href="/css/bootstrap.min.css"
+		>
+		<meta name="viewport" content="height=device-height, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+		<link rel="stylesheet" href="fonts/fontawesome-free-5.15.4-web/css/all.min.css">
+		<meta name="theme-color" media="(prefers-color-scheme: light)" content="#eceff4">
+		<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#2e3440">
+		<meta name="color-scheme" content="light dark">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Nova+Mono&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/css/tridentu-styles.css">
+		<link rel="alternate" type="application/atom+xml" title="{{ site.title }}" href="{{ '/feed.xml' | relative_url }}">
 
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-   <script src="/js/bootstrap.bundle.min.js"></script>
-	<link rel="manifest" href="/manifest.webmanifest">
-<script async src="https://cdn.jsdelivr.net/npm/pwacompat" crossorigin="anonymous"></script>
-<link rel="icon" type="image/png" href="/images/icons/icon-48x48.png" sizes="48x48" />
-</head>
-<body>
-<header class="text-bg-light bg-light">
- <nav class="navbar navbar-expand" data-bs-theme="light">
-   <div class="container-fluid">
-	   <a class="navbar-brand" href="{{ site.path }}">
-	       <img src="/images/tridentur.svg" width="32" height="32" />
-		   <span class="title">Tridentu Linux</span>
-	   </a>
-	   <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-		      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-			<li class="nav-item">
-				<a class="nav-link" href="/">
-					Home
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="/features">
-					Features
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="https://tridentu2.miraheze.org/wiki/Main_Page">
-					Wiki
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="/changelogs">
-					Release Notes
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="/trlis/">
-					Specifications
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="/download">
-					Download
-				</a>
-			</li>
-			</ul>
-	   </div>
-	 </div>
-	</nav>
-</header>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+		<script src="/js/bootstrap.bundle.min.js"></script>
+		<link rel="manifest" href="/manifest.webmanifest">
+		<script async src="https://cdn.jsdelivr.net/npm/pwacompat" crossorigin="anonymous"></script>
+		<link rel="icon" type="image/png" href="/images/icons/icon-48x48.png" sizes="48x48">
+	</head>
+	<body class="cabin-text">
+		<header class="text-bg-light bg-light">
+			<nav class="navbar navbar-expand" data-bs-theme="light">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="{{ site.path }}">
+						<img src="/images/tridentur.svg" width="32" height="32">
+						<span class="title">Tridentu Linux</span>
+					</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarSupportedContent">
+						<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+							<li class="nav-item">
+								<a class="nav-link" href="/">
+									Home
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/features">
+									Features
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="https://tridentu2.miraheze.org/wiki/Main_Page">
+									Wiki
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/changelogs">
+									Release Notes
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/trlis/">
+									Specifications
+								</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link" href="/download">
+									Download
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
 
-	<div class="container-fluid">
-        {{ content }}
-    </div><!-- /.container -->  
+		<div class="container-fluid">
+			{{ content }}
+		</div><!-- /.container -->
 
-	<footer class="py-3 my-4">
-		<div class="row">
-			<ul class="nav justify-content-center border-bottom pb-3 mb-3">
-				<li class="nav-item mb-2"><a href="/" class="nav-link px-2 text-body-secondary">Home</a></li>
-				<li class="nav-item mb-2"><a href="/features" class="nav-link px-2 text-body-secondary">Features</a></li>
-				<li class="nav-item mb-2"><a href="/changelogs" class="nav-link px-2 text-body-secondary">Changelog</a></li>
-				<li class="nav-item mb-2"><a href="https://github.com/Tridentu/tridentu2/issues" class="nav-link px-2 text-body-secondary">Issue Tracker</a></li>
-			</ul>
-		</div>
-		<p class="text-center text-body-secondary">Copyright (C) {{ site.time | date: "%Y" }}</p>
-	</footer>
-	<script>
-		if ('serviceWorker' in navigator) {
-			// Use the window load event to keep the page load performant
-			window.addEventListener('load', () => {
-				navigator.serviceWorker.register('/sw.js');
-			});
+		<footer class="py-3 my-4">
+			<div class="row">
+				<ul class="nav justify-content-center border-bottom pb-3 mb-3">
+					<li class="nav-item mb-2"><a href="/" class="nav-link px-2 text-body-secondary">Home</a></li>
+					<li class="nav-item mb-2"><a href="/features" class="nav-link px-2 text-body-secondary">Features</a></li>
+					<li class="nav-item mb-2"><a href="/changelogs" class="nav-link px-2 text-body-secondary">Changelog</a></li>
+					<li class="nav-item mb-2"><a href="https://github.com/Tridentu/tridentu2/issues" class="nav-link px-2 text-body-secondary">Issue Tracker</a></li>
+				</ul>
+			</div>
+			<p class="text-center text-body-secondary">Copyright (C) {{ site.time | date: "%Y" }}</p>
+		</footer>
+		<script>
+			if ('serviceWorker' in navigator) {
+				// Use the window load event to keep the page load performant
+				window.addEventListener('load', () => {
+					navigator.serviceWorker.register('/sw.js');
+				});
 		}
-	</script>
-</body>
+		</script>
+	</body>
 </html>

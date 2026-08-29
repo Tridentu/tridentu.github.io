@@ -4,6 +4,7 @@
 // add bootstrap variable settings here
 
 @import 'bootstrap/bootstrap.scss';
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Nova+Mono&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@700&display=swap");
 
 // add more css stuff here
@@ -20,4 +21,20 @@ html, body {
 
 .bg-dark {
     background-color: #2e3440;
+}
+
+
+.cabin-text{
+  font-family: "Cabin", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+  "wdth" 100;
+}
+
+.nova-mono-regular {
+  font-family: "Nova Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
 }
