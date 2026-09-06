@@ -3,25 +3,31 @@ title: Release Notes
 home: true
 layout: default
 ---
+<nav aria-label="breadcrumb">
+	<ol class="breadcrumb">
+		<li class="breadcrumb-item"><a href="/">Home</a></li>
+		<li class="breadcrumb-item active" aria-current="page">Releases</li>
+	</ol>
+</nav>
 
 <h3>Releases</h3>
 
 {% for category in site.categories %}
-  {% if category[0] == 'releases' %}
-      {% for post in category[1] %}
+{% if category[0] == 'releases' %}
+{% for post in category[1] %}
 
-    <div class="col-6">
-      <div class="card text-center">
-         <div class="card-body">
-            <h5 class="card-title">
-                  {{ post.title }}
-            </h5>
-            <p class="card-text">{{ post.excerpt }}</p>
-            <a href="{{ post.url }}" class="btn btn-primary">Read More</a>
-        </div>
-          <div class="card-footer text-body-secondary">{{ post.date | date_to_string: "ordinal", "US"  }}</div>
-      </div>
-   </div>
-  {% endfor %}
-   {% endif %}
+<div class="col-6">
+	<div class="card text-center">
+		<div class="card-body">
+			<h5 class="card-title">
+				{{ post.title }}
+			</h5>
+			<p class="card-text">{{ post.excerpt }}</p>
+			<a href="{{ post.url }}" class="btn btn-primary">Read More</a>
+		</div>
+		<div class="card-footer text-body-secondary">{{ post.date | date_to_string: "ordinal", "US"  }}</div>
+	</div>
+</div>
+{% endfor %}
+{% endif %}
 {% endfor %}
