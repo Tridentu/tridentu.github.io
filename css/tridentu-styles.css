@@ -19,9 +19,21 @@
 	--bs-secondary-bg: #d8dee9;
 	--bs-tertiary-bg: #e5e9f0;
 	--bs-primary: #5e81ac;
-	--bs-dark: #2e3440;
 	--bs-btn-bg: #5e81ac;
 	--bs-body-font-family: "Cabin", Montserrat;
+	--bs-primary-rgb:94,129,172;
+	--bs-success:#A3BE8C;
+	--bs-success-rgb:163,190,140;
+	--bs-info:#88C0D0;
+	--bs-info-rgb:136,192,208;
+	--bs-warning:#EBCB8B;
+	--bs-warning-rgb:235,203,139;
+	--bs-danger:#BF616A;
+	--bs-danger-rgb:191,97,106;
+	--bs-light:#ECEFF4;
+	--bs-light-rgb:236,239,244;
+	--bs-dark:#2E3440;
+	--bs-dark-rgb:46,52,64;
 }
 
 .header {
