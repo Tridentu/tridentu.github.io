@@ -41,8 +41,7 @@
   featureType: Built-in feature
   variants: Universal
 - title: Dual Launchers
-  text: Don't like Krunner? Have no fear! On Tridentu 2, all you have to do is just press <kbd>Alt + Space</kbd>
-					to access Vicinae.
+  text: Don't like Krunner? Have no fear! On Tridentu 2, all you have to do is just press <kbd>Alt + Space</kbd> to access Vicinae.
   image: images/vicinae.png
   imageCaption: Vicinae in action
   featureType: Built-in feature
