@@ -1,6 +1,5 @@
 - title: Caravel
-  text: The Caravel Package Manager is  specifically built for Tridentu Linux. It features easy downloading and installation of packages (dotfiles included), Lua scripting
-					(for hooks and installation scripts) and a simple manifest.
+  text: The Caravel Package Manager is  specifically built for Tridentu Linux. It features easy downloading and installation of packages (dotfiles included), Lua scripting (for hooks and installation scripts) and a simple manifest.
   image: images/caravel.png
   imageCaption: Caravel in action
   featureType: Package Manager
