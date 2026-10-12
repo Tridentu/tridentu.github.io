@@ -34,6 +34,11 @@
 	--bs-light-rgb:236,239,244;
 	--bs-dark:#2E3440;
 	--bs-dark-rgb:46,52,64;
+
+		--nord0:#2E3440; --nord1:#3B4252; --nord2:#434C5E; --nord3:#4C566A;
+		--nord4:#D8DEE9; --nord5:#E5E9F0; --nord6:#ECEFF4;
+		--nord7:#8FBCBB; --nord8:#88C0D0; --nord9:#81A1C1; --nord10:#5E81AC;
+		--nord11:#BF616A; --nord12:#D08770; --nord13:#EBCB8B; --nord14:#A3BE8C; --nord15:#B48EAD;
 }
 
 .header {
@@ -93,3 +98,53 @@ html !important, body !important {
 .hero-title {
 	font-family: Iosevka, Cabin, Montserrat;
 }
+
+
+/* Buttons: one shared rule, each variant only sets a color and its text color */
+.btn-primary, .btn-secondary, .btn-success, .btn-info,
+.btn-warning, .btn-danger, .btn-light, .btn-dark,
+.btn-outline-primary, .btn-outline-secondary, .btn-outline-success,
+.btn-outline-info, .btn-outline-warning, .btn-outline-danger {
+	--bs-btn-bg: var(--c);
+	--bs-btn-border-color: var(--c);
+	--bs-btn-color: var(--on);
+	--bs-btn-hover-bg: color-mix(in srgb, var(--c) 85%, #fff);
+	--bs-btn-hover-border-color: color-mix(in srgb, var(--c) 85%, #fff);
+	--bs-btn-hover-color: var(--on);
+	--bs-btn-active-bg: color-mix(in srgb, var(--c) 75%, #000);
+	--bs-btn-active-border-color: color-mix(in srgb, var(--c) 75%, #000);
+	--bs-btn-active-color: var(--on);
+	--bs-btn-disabled-bg: var(--c);
+	--bs-btn-disabled-border-color: var(--c);
+	--bs-btn-disabled-color: var(--on);
+	--bs-btn-focus-shadow-rgb: var(--rgb);
+}
+
+.btn-primary   { --c:var(--nord10); --on:var(--nord6); --rgb:94,129,172; }
+.btn-secondary { --c:var(--nord3);  --on:var(--nord6); --rgb:76,86,106; }
+.btn-success   { --c:var(--nord14); --on:var(--nord0); --rgb:163,190,140; }
+.btn-info      { --c:var(--nord8);  --on:var(--nord0); --rgb:136,192,208; }
+.btn-warning   { --c:var(--nord13); --on:var(--nord0); --rgb:235,203,139; }
+.btn-danger    { --c:var(--nord11); --on:var(--nord6); --rgb:191,97,106; }
+.btn-light     { --c:var(--nord6);  --on:var(--nord0); --rgb:236,239,244; }
+.btn-dark      { --c:var(--nord0);  --on:var(--nord6); --rgb:46,52,64; }
+
+/* Outline variants: transparent until hover */
+.btn-outline-primary   { --c:var(--nord10); --on:var(--nord6); --rgb:94,129,172; }
+.btn-outline-secondary { --c:var(--nord3);  --on:var(--nord6); --rgb:76,86,106; }
+.btn-outline-success   { --c:var(--nord14); --on:var(--nord0); --rgb:163,190,140; }
+.btn-outline-info      { --c:var(--nord8);  --on:var(--nord0); --rgb:136,192,208; }
+.btn-outline-warning   { --c:var(--nord13); --on:var(--nord0); --rgb:235,203,139; }
+.btn-outline-danger    { --c:var(--nord11); --on:var(--nord6); --rgb:191,97,106; }
+[class*="btn-outline-"] {
+	--bs-btn-bg: transparent;
+	--bs-btn-color: var(--c);
+}
+[class*="btn-outline-"]:hover,
+[class*="btn-outline-"]:active { --bs-btn-bg: var(--c); }
+
+/* Badges: background follows --bs-*-rgb above; only the text color needs fixing */
+.text-bg-primary, .text-bg-secondary, .text-bg-danger { color: var(--nord6) !important; }
+.text-bg-success, .text-bg-info, .text-bg-warning,
+.text-bg-light { color: var(--nord0) !important; }
+.text-bg-dark { color: var(--nord6) !important; }
