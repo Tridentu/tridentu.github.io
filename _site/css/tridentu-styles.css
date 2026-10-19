@@ -1,41 +1,150 @@
-		@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-		:root {
-			 --bs-body-color: #2e3440;
-			 --bs-body-bg: #eceff4;
-			 --bs-secondary-color: #3b4252;
-			 --bs-secondary-bg: #d8dee9;
-			 --bs-tertiary-bg: #e5e9f0;
-			 --bs-primary: #5e81ac;
-			 --bs-dark: #2e3440;
-			 --bs-btn-bg: #5e81ac;
-			 --bs-body-font-family: "Fantasque Sans Mono", Montserrat;
-		}
+@import url('https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Nova+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-		.header {
-			background-color: #eceff4;
-			color: #2e3440;
-		}
-		#splash-img {
-			background: url("../images/cpucity.png") center / cover no-repeat;
-			background-color:#444;
-			background-blend-mode: overlay;
+@font-face {
+	font-family: 'Iosevka';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 400;
+	src: url(https://cdn.jsdelivr.net/fontsource/fonts/iosevka@5.3.0/latin-400-normal.woff2) format(woff2),
+	url(https://cdn.jsdelivr.net/fontsource/fonts/iosevka@5.3.0/latin-400-normal.woff) format('woff');
+}
 
 
-		}
-		.white {
-			color: #eceff4;
-		}
-		.footer {
-		`	background-color: #2e3440;
-		}
-		.frame {
-			background-color: #d8dee9;
-		}
-		.non-select {
-			user-select: none;
-		}
-		@media (display-mode: standalone), (display-mode: fullscreen), (display-mode: minimal-ui) {
-            body {
-                overscroll-behavior-y: contain;
-            }
-		}
+:root {
+	--bs-body-color: #2e3440;
+	--bs-body-bg: #d8dee9;
+	--bs-secondary-color: #3b4252;
+	--bs-secondary-bg: #d8dee9;
+	--bs-tertiary-bg: #e5e9f0;
+	--bs-primary: #5e81ac;
+	--bs-btn-bg: #5e81ac;
+	--bs-body-font-family: "Cabin", Montserrat;
+	--bs-primary-rgb:94,129,172;
+	--bs-success:#A3BE8C;
+	--bs-success-rgb:163,190,140;
+	--bs-info:#88C0D0;
+	--bs-info-rgb:136,192,208;
+	--bs-warning:#EBCB8B;
+	--bs-warning-rgb:235,203,139;
+	--bs-danger:#BF616A;
+	--bs-danger-rgb:191,97,106;
+	--bs-light:#ECEFF4;
+	--bs-light-rgb:236,239,244;
+	--bs-dark:#2E3440;
+	--bs-dark-rgb:46,52,64;
+
+		--nord0:#2E3440; --nord1:#3B4252; --nord2:#434C5E; --nord3:#4C566A;
+		--nord4:#D8DEE9; --nord5:#E5E9F0; --nord6:#ECEFF4;
+		--nord7:#8FBCBB; --nord8:#88C0D0; --nord9:#81A1C1; --nord10:#5E81AC;
+		--nord11:#BF616A; --nord12:#D08770; --nord13:#EBCB8B; --nord14:#A3BE8C; --nord15:#B48EAD;
+}
+
+.header {
+	background-color: #eceff4;
+	color: #2e3440;
+}
+
+#splash-img {
+	background: url("../images/cpucity.png") center / cover no-repeat;
+	background-color:#444;
+	background-blend-mode: overlay;
+}
+
+.white {
+	color: #eceff4;
+}
+
+.footer {
+	`	background-color: #2e3440;
+}
+
+.frame {
+	background-color: #d8dee9;
+}
+
+.non-select {
+	user-select: none;
+}
+
+@media (display-mode: standalone), (display-mode: fullscreen), (display-mode: minimal-ui) {
+	body {
+		overscroll-behavior-y: contain;
+	}
+}
+
+
+html !important, body !important {
+	font-family: Cabin;
+	width: 100%;
+	height: 100%;
+}
+
+.content {
+	padding: 40px 15px;
+}
+
+.bg-dark {
+	background-color: #2e3440;
+}
+
+.title.tridentu-logo-text {
+	font-family: Iosevka, Montserrat, Cabin;
+	font-variant-caps: unicase;
+	text-transform: uppercase;
+}
+
+.hero-title {
+	font-family: Iosevka, Cabin, Montserrat;
+}
+
+
+/* Buttons: one shared rule, each variant only sets a color and its text color */
+.btn-primary, .btn-secondary, .btn-success, .btn-info,
+.btn-warning, .btn-danger, .btn-light, .btn-dark,
+.btn-outline-primary, .btn-outline-secondary, .btn-outline-success,
+.btn-outline-info, .btn-outline-warning, .btn-outline-danger {
+	--bs-btn-bg: var(--c);
+	--bs-btn-border-color: var(--c);
+	--bs-btn-color: var(--on);
+	--bs-btn-hover-bg: color-mix(in srgb, var(--c) 85%, #fff);
+	--bs-btn-hover-border-color: color-mix(in srgb, var(--c) 85%, #fff);
+	--bs-btn-hover-color: var(--on);
+	--bs-btn-active-bg: color-mix(in srgb, var(--c) 75%, #000);
+	--bs-btn-active-border-color: color-mix(in srgb, var(--c) 75%, #000);
+	--bs-btn-active-color: var(--on);
+	--bs-btn-disabled-bg: var(--c);
+	--bs-btn-disabled-border-color: var(--c);
+	--bs-btn-disabled-color: var(--on);
+	--bs-btn-focus-shadow-rgb: var(--rgb);
+}
+
+.btn-primary   { --c:var(--nord10); --on:var(--nord6); --rgb:94,129,172; }
+.btn-secondary { --c:var(--nord3);  --on:var(--nord6); --rgb:76,86,106; }
+.btn-success   { --c:var(--nord14); --on:var(--nord0); --rgb:163,190,140; }
+.btn-info      { --c:var(--nord8);  --on:var(--nord0); --rgb:136,192,208; }
+.btn-warning   { --c:var(--nord13); --on:var(--nord0); --rgb:235,203,139; }
+.btn-danger    { --c:var(--nord11); --on:var(--nord6); --rgb:191,97,106; }
+.btn-light     { --c:var(--nord6);  --on:var(--nord0); --rgb:236,239,244; }
+.btn-dark      { --c:var(--nord0);  --on:var(--nord6); --rgb:46,52,64; }
+
+/* Outline variants: transparent until hover */
+.btn-outline-primary   { --c:var(--nord10); --on:var(--nord6); --rgb:94,129,172; }
+.btn-outline-secondary { --c:var(--nord3);  --on:var(--nord6); --rgb:76,86,106; }
+.btn-outline-success   { --c:var(--nord14); --on:var(--nord0); --rgb:163,190,140; }
+.btn-outline-info      { --c:var(--nord8);  --on:var(--nord0); --rgb:136,192,208; }
+.btn-outline-warning   { --c:var(--nord13); --on:var(--nord0); --rgb:235,203,139; }
+.btn-outline-danger    { --c:var(--nord11); --on:var(--nord6); --rgb:191,97,106; }
+[class*="btn-outline-"] {
+	--bs-btn-bg: transparent;
+	--bs-btn-color: var(--c);
+}
+[class*="btn-outline-"]:hover,
+[class*="btn-outline-"]:active { --bs-btn-bg: var(--c); }
+
+/* Badges: background follows --bs-*-rgb above; only the text color needs fixing */
+.text-bg-primary, .text-bg-secondary, .text-bg-danger { color: var(--nord6) !important; }
+.text-bg-success, .text-bg-info, .text-bg-warning,
+.text-bg-light { color: var(--nord0) !important; }
+.text-bg-dark { color: var(--nord6) !important; }
