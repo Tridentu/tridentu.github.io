@@ -33,6 +33,11 @@
             "name": "Features",
             "url": "/features",
             "description": "Lists Tridentu's main features."
+        },
+        {
+            "name": "Privacy Policy",
+            "url": "/privacy-policy",
+            "description": "View Tridentu 2's privacy policy here."
         }
     ]
 }
