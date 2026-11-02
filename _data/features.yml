@@ -46,4 +46,9 @@
   imageCaption: Vicinae in action
   featureType: Built-in feature
   variants: GT+
-
+- title: Ishimura Assistant
+  text: Need to track updates to KDE Plasma widgets or Tridentu 2's Ishimura APT repository? Ishimura Assistant gives you that information/choice straight from your desktop!
+  image: images/ishimura-assistant.png
+  imageCaption: Ishimura Assistant in action
+  featureType: Built-in feature
+  variants: K Only
