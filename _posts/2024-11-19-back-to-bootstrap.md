@@ -2,6 +2,7 @@
 layout: post
 title: Switching to Bootstrap
 author: Aerodos12
+comments: true
 ---
 
 The site has used Cirrus UI for a long time. However, it's not the most feature-rich experience that it could have.

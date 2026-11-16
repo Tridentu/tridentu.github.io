@@ -2,6 +2,7 @@
 layout: post
 title: Weekly Recap (March 2025)
 author: Aerodos12
+comments: true
 ---
 
 It's been a while since the last post. Let's go over what's changed.

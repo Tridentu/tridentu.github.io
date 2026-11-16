@@ -2,6 +2,7 @@
 layout: post
 title: Tridentu 2 1.3.0 underway
 author: Aerodos12
+comments: true
 ---
 
 **NOTE:** This article will be updated from time to time to give out progress reports.

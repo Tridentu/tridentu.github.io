@@ -2,7 +2,7 @@
 layout: post
 title: Tridentu 2 (GT 1.5) Underway
 category: releases
-
+comments: true
 ---
 
 ## Important News:

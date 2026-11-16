@@ -2,7 +2,7 @@
 layout: post
 title: Tridentu 2 (1.3) Released!
 category: releases
-
+comments: true
 ---
 
 

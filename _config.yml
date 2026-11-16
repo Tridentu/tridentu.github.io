@@ -32,6 +32,16 @@ plugins:
 exclude:
 - README.md
 
+giscus:
+  repo: Tridentu/tridentu2
+  repo_id: R_kgDOPWuvAg
+  category: Announcement Comments
+  category_id: DIC_kwDOPWuvAs4DLSE4
+  mapping: pathname # optional, defaults to pathname
+  theme: light_high_contrast
+  loading: lazy
+
+
 paginate: 2
 
 safe: true

@@ -2,7 +2,7 @@
 layout: post
 title: Tridentu 2 (CT 1.5) Released!
 category: releases
-
+comments: true
 ---
 
 Tridentu 2 1.5 has been initiated and released (CT variant only). This means that you get the following:
